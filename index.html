@@ -3,74 +3,222 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vineet's Portfolio</title>
-    <style>
-        body {
-            min-height: 100vh;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            overflow: hidden;
-            position: relative;
-        }
-        body::before {
-            content: "";
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: radial-gradient(circle at 20% 20%, #0f3460 0%, transparent 70%),
-                        radial-gradient(circle at 80% 80%, #533483 0%, transparent 70%);
-            opacity: 0.7;
-            z-index: 0;
-            animation: bgMove 8s linear infinite alternate;
-        }
-        @keyframes bgMove {
-            0% { background-position: 20% 20%, 80% 80%; }
-            100% { background-position: 80% 80%, 20% 20%; }
-        }
-        .center {
-            position: relative;
-            z-index: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100vw;
-            height: 100vh;
-        }
-        h2 {
-            font-size: 4rem;
-            color: #39ff14;
-            text-shadow:
-                0 0 1px #39ff14,
-                0 0 2px #39ff14,
-                0 0 4px #39ff14,
-                0 0 8px #39ff14;
-            font-family: 'Segoe UI', 'Arial', sans-serif;
-            animation: neonGlow 1.5s ease-in-out infinite alternate;
-            text-align: center;
-        }
-        @keyframes neonGlow {
-            from {
-                text-shadow:
-                    0 0 0px #39ff14,
-                    0 0 0px #39ff14,
-                    0 0 0px #39ff14,
-                    0 0 0px #39ff14;
-            }
-            to {
-                text-shadow:
-                    0 0 2px #adff14,
-                    0 0 4px #adff14,
-                    0 0 8px #adff14,
-                    0 0 16px #adff14;
-            }
-        }
-    </style>
+    <title>Vineet Kumar Sahu | FullStack Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
-    <div class="center">
-        <h2>Portfolio is under updation.</h2>
+    <div id="home" class="container">
+        <video class="back-vid" autoplay loop muted plays-inline src="videos/galaxy.mp4"></video>
+
+        <header data-aos="fade-down" data-aos-duration="1000">
+            <div class="left">
+                <img src="images/profile_img.jpg" alt="logo">
+                <h2>Vineet <span style="color: #72a1dea2;">Kumar Sahu</span></h2>
+            </div>
+
+            <ul>
+                <li><a href="#info-section">About</a></li>
+                <li><a href="#skills-section">Skills</a></li>
+                <li><a href="#projects-section">Projects</a></li>
+            </ul>
+
+            <div class="box-icons">
+                <a href="https://github.com/Krishna-Vineet" target="_blank"><i class='bx bxl-github'></i></a>
+                <a href="https://linkedin.com/in/vineet-kumar-sahu" target="_blank"><i class='bx bxl-linkedin-square'></i></a>
+            </div>
+
+            <div class="menu-icon">
+                <i class='bx bx-menu'></i>
+            </div>            
+        </header>
+        <div class="sidebar">
+            <div class="close-icon">
+                <i class='bx bx-x'></i>
+            </div>
+            
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#info-section">About</a></li>
+                <li><a href="#skills-section">Skills</a></li>
+                <li><a href="#projects-section">Projects</a></li>
+            </ul>
+
+            <div class="social-sidebar">
+                <a href="https://github.com/Krishna-Vineet"><i class='bx bxl-github'></i></a>
+                <a href="https://linkedin.com/in/vineet-kumar-sahu"><i class='bx bxl-linkedin-square'></i></a>
+            </div>
+        </div>
+
+        <div class="blackhole-box" data-aos="fade-down" data-aos-duration="1200">
+            <video autoplay loop muted plays-inline src="videos/blackhole.mp4"></video>
+        </div>
+
+        <section class="hero">
+            <div class="hero-info autoBlur" data-aos="fade-right" data-aos-duration="1000">
+                <div class="hero-info-title">
+                    <i class='bx bxl-javascript'></i>
+                    FullStack Developer Portfolio
+                </div>
+
+                <h1 data-aos="fade-right" data-aos-duration="1000">Delivering <span class="gradient">Scalable</span> and <span class="gradient">Secure</span> Web Experiences</h1>
+
+                <p>I’m a full-stack developer skilled in Node.js, Express, MongoDB, and EJS. I build secure, scalable apps with JWT auth, API integrations, and responsive frontends.</p>
+
+                <div class="buttons">
+                    <a href="https://wa.me/918368667517" target="_blank">
+                        <button><i class='bx bxl-whatsapp'></i> Contact Me</button>
+                    </a>
+                    <a href="files/resume.pdf" target="_blank">
+                        <button><i class='bx bx-send'></i> My Resume</button>
+                    </a>
+                </div>
+            </div>
+            <div class="skills-video-box">
+                <video class="skills-video autoBlur" autoplay loop muted plays-inline src="videos/hero-video.mp4"></video>
+            </div>
+            <div onclick="location.href='#info-section'" class="scroll-down"></div>
+        </section>
+
+<section class="info-section" id="info-section">
+    <h1 class="section-title autoDisplay">Hello, There 👋</h1>
+    <div class="info-cards">
+        <div class="card">
+            <h1>Hi, I'm Vineet Kumar Sahu</h1>
+            <p>Full-stack developer with a backend focus. Skilled in building secure, scalable apps using Node.js, MongoDB, and JWT, with AI-enhanced features via Gemini API.</p>
+            <img src="images/grid5.png" alt="">
+        </div>
+
+        <div class="card">
+            <h1>Tech Stack</h1>
+            <p>Hands-on experience with Node.js, Express, MongoDB, EJS, Tailwind CSS, REST APIs, JWT, and Gemini AI integration. Exploring Redis and cloud platforms.</p>
+            <img src="images/grid6.png" alt="">
+        </div>
+
+        <div class="card">
+            <h1>Internship & Freelance</h1>
+            <p>Backend Intern at Kaamsetu (Node.js, SQL, payments). Delivered a full e-commerce WordPress site as a freelance developer.</p>
+            <video src="videos/work.mp4" autoplay loop muted plays-inline></video>
+            <a href="https://wa.me/918368667517" target="_blank">
+                        <button><i class='bx bxl-whatsapp'></i> Contact Me</button>
+                    </a>
+        </div>
+
+        <div class="card">
+            <h1>Hackathon Highlights</h1>
+    <p>🏆 Winner – Hackcraft'24 (Krishi Sahayak), 🥈 1st Runner-Up – CodeSangam (WeGo), 🔝 Top 5 – Hacked 3.0 (Amparo). Consistently recognized for end-to-end full-stack solutions. Also participated in Tryst (IITD), Innoverse, WeiHack, and other national-level hackathons, excelling in both backend logic and UI execution.</p>
+            <img src="images/grid7.png" alt="">
+        </div>
     </div>
+</section>
+
+
+        <section id="projects-section" class="my-project">
+            <h1 class="section-title autoDisplay">My Projects 👨‍💻</h1>
+            <div class="project-card">
+                <div class="project-vidbox autoBlur">
+                    <video loop id="projectVideo1" src="videos/wego.mp4"></video>
+                    <div class="hover-sign"></div>
+                </div>
+                <div class="project-info fadein-left">
+                    <h1><span class="gradient">WeGo</span> – AI Travel Platform</h1>
+                    <p>Full-stack app with trip planning, real-time destination data via Gemini API, and secure JWT auth system. Hackathon Winner.</p>
+                    <div class="buttons">
+                        <button onclick="window.open('https://wego-theta.vercel.app', '_blank')"><i class='bx bx-link-external'></i> Website</button>
+                        <button onclick="window.open('https://github.com/Krishna-Vineet/wego', '_blank')"><i class='bx bx-link-external'></i> Source Code</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-vidbox autoBlur">
+                    <video loop id="projectVideo2" src="videos/amparo.mp4"></video>
+                    <!-- <div class="hover-sign"></div> -->
+                </div>
+                <div class="project-info fadein-left">
+                    <h1><span class="gradient">Amparo</span> – AI Health Assistant</h1>
+                    <p>Emergency alert system with AI chat and Twilio SMS/Call support. Fully built backend, frontend JS, and Gemini integration.</p>
+                    <div class="buttons">
+                        <button onclick="window.open('https://amparo-seven.vercel.app', '_blank')"><i class='bx bx-link-external'></i> Website</button>
+                        <button onclick="window.open('https://github.com/Krishna-Vineet/amparo', '_blank')"><i class='bx bx-link-external'></i> Source Code</button>    
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-vidbox autoBlur">
+                    <video loop id="projectVideo3" src="videos/blogit.mp4"></video>
+                    <!-- <div class="hover-sign"></div> -->
+                </div>
+                <div class="project-info fadein-left">
+                    <h1><span class="gradient">Blogit</span> – Blogging Platform</h1>
+                    <p>Feature-rich blog with JWT+OTP auth, image upload (Cloudinary), and REST APIs. Built end-to-end backend system with Node & MongoDB.</p>
+                    <div class="buttons">
+                        <button onclick="window.open('https://blogit-gamma.vercel.app', '_blank')"><i class='bx bx-link-external'></i> Website</button>
+                        <button onclick="window.open('https://github.com/Krishna-Vineet/blogit', '_blank')"><i class='bx bx-link-external'></i> Source Code</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills-section" class="skills-section">
+            <h1 class="section-title autoDisplay">My Skills 💪</h1>
+            <div class="skills-box autoDisplay">
+                <img class="skills-image" src="images/digital brain (2).png" alt="">
+                <div class="Designer">
+                    <h1 class="gradient">Backend Stack <i class='bx bx-data'></i></h1>
+                    <p>Node.js, Express.js, MongoDB, JWT, Multer, Redis (exploring), MySQL, Routes Protection, Mongoose Aggregation</p>
+                </div>
+                <div class="coder">
+                    <h1 class="gradient">Frontend & Tools <i class='bx bx-code-alt'></i></h1>
+                    <p>HTML, CSS, JavaScript, EJS, Tailwind CSS, React, Git, GitHub, Postman, Vercel, VS Code, Chrome DevTools</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <h1 class="section-title autoDisplay">Let’s Talk 😊</h1>
+            <div class="social-box autoBlur">
+                <a href="tel:+918368667517"><i class='bx bxs-phone'></i> +91 8368667517</a>
+                <a href="mailto:itsvineetsahu@gmail.com"><i class='bx bxl-gmail'></i> itsvineetsahu@gmail.com</a>
+                <a href="https://linkedin.com/in/vineet-kumar-sahu" target="_blank"><i class='bx bxl-linkedin-square'></i> LinkedIn</a>
+                <a href="https://github.com/Krishna-Vineet" target="_blank"><i class='bx bxl-github'></i> Github</a>
+                
+            </div>
+
+            <div class="contact-box autoBlur">
+                <form id="my-form" action="https://formspree.io/f/mrbkqkwa" method="POST">
+
+                    <p>Have a project in mind or want to collaborate? Let’s connect and make something impactful together.</p>
+                    <p>Full Name</p>
+                    <input placeholder="Your Full name" name="name" type="text">
+                    
+                    <p>Email Address</p>
+                    <input placeholder="Your Email" name="email" type="email">
+                    
+                    <p>Your Message</p>
+                    <input class="input-message" type="text" name="message" placeholder="Share your thoughts...">
+                    
+                    <button type="submit">Send Message <i class='bx bx-mail-send'></i></button>
+                </form>
+                <p id="status"></p>
+            </div>
+        </section>
+
+        <section class="footer">
+            <h1>©️2025, Made with ❤️ by Vineet Kumar Sahu</h1>
+            <div class="box-icons">
+                <a href="https://github.com/Krishna-Vineet"><i class='bx bxl-github'></i></a>
+                <a href="https://www.linkedin.com/in/vineet-kumar-sahu/"><i class='bx bxl-linkedin-square'></i></a>
+            </div>
+        </section>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 </html>
